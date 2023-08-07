@@ -13,6 +13,15 @@ trurlurl = "https://www.boxofficemojo.com/weekend/by-year/2023/?area=TR"
 dunya = ["dunya", "d", "Dünya", "dünya", "world"] 
 turkiye = ["turkiye", "turkey", "t", "türkiye", "turk", "türk"]
 
+@Client.on_message(filters.command('start'))
+async def start(bot, message):
+    photo="https://telegra.ph/file/c2f8f0579d9a18702151a.jpg" 
+    text=f"Merhaba, {message.from_user.mention}\n\nBu Bot sayesinde (BoxOfficeMojo)[https://www.boxofficemojo.com] sitesinden Türkiye, Dünya ve Tüm zamanlar Güncel Gişe Bilgilerini alabilirsin..\n\nKomutlar:\n/gise t\n/gise d\n/gise"
+    await message.reply_photo(
+      photo=photo,
+      caption=caption
+    )
+
 @Client.on_message(filters.command('gise'))
 async def tumgise(bot, message):
     try:
