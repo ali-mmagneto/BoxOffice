@@ -19,7 +19,7 @@ async def start(bot, message):
     text=f"Merhaba, {message.from_user.mention}\n\nBu Bot sayesinde (BoxOfficeMojo)[https://www.boxofficemojo.com] sitesinden Türkiye, Dünya ve Tüm zamanlar Güncel Gişe Bilgilerini alabilirsin..\n\nKomutlar:\n/gise t\n/gise d\n/gise"
     await message.reply_photo(
       photo=photo,
-      caption=caption
+      caption=text
     )
 
 @Client.on_message(filters.command('gise'))
